@@ -7,7 +7,8 @@ services:
     volumes:
       - .:/example-jwt-express
       - node_modules:/example-jwt-express/node-modules
-    ports: 3000:3000
+    ports: 
+      - 3000:3000
     stdin_open: true
     command: npm run dev
 volumes:
