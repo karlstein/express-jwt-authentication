@@ -3,7 +3,7 @@ services:
     image: mongo:5.0.2
     restart: unless-stopped
     ports:
-      - 3000:3000
+      - 7314:7314
     volumes:
       - db:/data/db
   app:
