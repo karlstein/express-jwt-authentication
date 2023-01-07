@@ -1,10 +1,10 @@
 services:
   app:
-    container_name: 'express-jwt-mongo'
+    container_name: 'app'
     build: .
     volumes:
-      - .:/example-jwt-express
-      - node_modules:/example-jwt-express/node-modules
+      - .:/app
+      - node_modules:/app/node-modules
     ports: 
       - 3000:3000
     stdin_open: true
