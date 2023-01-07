@@ -8,6 +8,6 @@ services:
     ports: 
       - 3000:3000
     stdin_open: true
-    command: npm run dev
+    command: npm start
 volumes:
   node_modules:
