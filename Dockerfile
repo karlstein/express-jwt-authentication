@@ -1,7 +1,7 @@
-FROM node:alpine
+FROM node:gallium
 RUN npm install -g nodemon
 
-WORKDIR /example-jwt-express
+WORKDIR /app
 
 COPY package*.json ./
 RUN npm install --silent
@@ -9,4 +9,3 @@ RUN npm install --silent
 COPY . ./
 
 EXPOSE 3000
-CMD [ "nodemon" ]
