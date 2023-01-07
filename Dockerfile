@@ -1,9 +1,9 @@
 FROM node:14
 RUN npm install -g nodemon
 
-WORKDIR /app
+WORKDIR /bezkoder-app
 
-COPY package*.json ./
+COPY package.json .
 RUN npm install
 
 COPY . .

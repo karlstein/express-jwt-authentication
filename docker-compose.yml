@@ -1,12 +1,18 @@
 services:
-  app:
-    container_name: 'app'
-    build: .
-    volumes:
-      - .:/app
-      - node_modules:/app/node-modules
-    ports: 
+  mongodb:
+    image: mongo:5.0.2
+    restart: unless-stopped
+    ports:
       - 3000:3000
+    volumes:
+      - db:/data/db
+  app:
+    depends_on:
+      - mongodb
+    build: ./bezkoder-app
+    restart: unless-stopped
     stdin_open: true
+    tty: true
+
 volumes:
-  node_modules:
+  db:
