@@ -1,4 +1,4 @@
-FROM node:gallium
+FROM node:14
 RUN npm install -g nodemon
 
 WORKDIR /app
@@ -6,6 +6,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY . ./
-
-EXPOSE 3000
+COPY . .
+CMD npm start
+# EXPOSE 3000
